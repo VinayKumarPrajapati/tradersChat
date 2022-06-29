@@ -5,9 +5,10 @@ import {
 	Route,
 	Redirect,
 } from "react-router-dom";
-import LoginPage from "./authPages/loginPages/LoginPage";
-import RegisterPage from "./authPages/registerPages/RegisterPage";
+import Login from "./authPages/loginPages/LoginPage";
+import Register from "./authPages/registerPages/RegisterPage";
 import Dashboard from "./Dashborad/dashboard";
+import AlertNotification from "./shared/components/AlertNotification";
 import "./App.css";
 
 function App() {
@@ -16,10 +17,10 @@ function App() {
 			<Router>
 				<Switch>
 					<Route exact path="/login">
-						<LoginPage />
+						<Login />
 					</Route>
 					<Route exact path="/register">
-						<RegisterPage />
+						<Register />
 					</Route>
 					<Route exact path="/dashboard">
 						<Dashboard />
