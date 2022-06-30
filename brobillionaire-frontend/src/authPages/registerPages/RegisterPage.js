@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Typography } from "@mui/material";
 import AuthBox from "../../shared/components/AuthBox";
-import RegisterPageInputs from "./RegisterPageInputs";
+import RegisterPageInputs from "./RegisterPageInput";
 import RegisterPageFooter from "./RegisterPageFooter";
 import { validateRegisterForm } from "../../shared/utils/validators";
 import { connect } from "react-redux";
