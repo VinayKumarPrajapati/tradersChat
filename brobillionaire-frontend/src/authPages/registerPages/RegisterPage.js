@@ -5,7 +5,7 @@ import RegisterPageInputs from "./RegisterPageInput";
 import RegisterPageFooter from "./RegisterPageFooter";
 import { validateRegisterForm } from "../../shared/utils/validators";
 import { connect } from "react-redux";
-import { getActions } from "../../store/actions/authAction";
+import { getActions } from "../../store/actions/authActions";
 import { useHistory } from "react-router-dom";
 
 const RegisterPage = ({ register }) => {

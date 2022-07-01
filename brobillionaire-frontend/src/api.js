@@ -22,6 +22,8 @@ apiClient.interceptors.request.use(
 	}
 );
 
+// public routes
+
 export const login = async (data) => {
 	try {
 		return await apiClient.post("/auth/login", data);
@@ -37,6 +39,43 @@ export const register = async (data) => {
 	try {
 		return await apiClient.post("/auth/register", data);
 	} catch (exception) {
+		return {
+			error: true,
+			exception,
+		};
+	}
+};
+
+// secure routes
+export const sendFriendInvitation = async (data) => {
+	try {
+		return await apiClient.post("/friend-invitation/invite", data);
+	} catch (exception) {
+		checkResponseCode(exception);
+		return {
+			error: true,
+			exception,
+		};
+	}
+};
+
+export const acceptFriendInvitation = async (data) => {
+	try {
+		return await apiClient.post("/friend-invitation/accept", data);
+	} catch (exception) {
+		checkResponseCode(exception);
+		return {
+			error: true,
+			exception,
+		};
+	}
+};
+
+export const rejectFriendInvitation = async (data) => {
+	try {
+		return await apiClient.post("/friend-invitation/reject", data);
+	} catch (exception) {
+		checkResponseCode(exception);
 		return {
 			error: true,
 			exception,

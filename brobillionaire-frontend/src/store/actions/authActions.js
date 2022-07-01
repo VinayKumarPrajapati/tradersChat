@@ -1,5 +1,5 @@
 import * as api from "../../api";
-import { openAlertMessage } from "./alertAction";
+import { openAlertMessage } from "./alertActions";
 
 export const authAction = {
 	SET_USER_DETAILS: "AUTH.SET_USER_DETAILS",
