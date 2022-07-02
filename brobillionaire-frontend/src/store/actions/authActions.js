@@ -1,7 +1,7 @@
 import * as api from "../../api";
 import { openAlertMessage } from "./alertActions";
 
-export const authAction = {
+export const authActions = {
 	SET_USER_DETAILS: "AUTH.SET_USER_DETAILS",
 };
 
@@ -10,12 +10,13 @@ export const getActions = (dispatch) => {
 		login: (userDetails, history) => dispatch(login(userDetails, history)),
 		register: (userDetails, history) =>
 			dispatch(register(userDetails, history)),
+		setUserDetails: (userDetails) => dispatch(setUserDetails(userDetails)),
 	};
 };
 
 const setUserDetails = (userDetails) => {
 	return {
-		type: authAction.SET_USER_DETAILS,
+		type: authActions.SET_USER_DETAILS,
 		userDetails,
 	};
 };

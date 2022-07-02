@@ -1,7 +1,7 @@
-const regsiter = require("./register");
-const login = require("./login");
+const postRegister = require("./postRegister");
+const postLogin = require("./postLogin");
 
 exports.controllers = {
-	login,
-	regsiter,
+	postLogin,
+	postRegister,
 };

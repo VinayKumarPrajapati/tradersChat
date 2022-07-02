@@ -5,10 +5,11 @@ import {
 	Route,
 	Redirect,
 } from "react-router-dom";
-import Login from "./authPages/loginPages/LoginPage";
-import Register from "./authPages/registerPages/RegisterPage";
-import Dashboard from "./Dashborad/dashboard";
+import LoginPage from "./authPages/LoginPage/LoginPage";
+import RegisterPage from "./authPages/RegisterPage/RegisterPage";
+import Dashboard from "./Dashboard/Dashboard";
 import AlertNotification from "./shared/components/AlertNotification";
+
 import "./App.css";
 
 function App() {
@@ -17,10 +18,10 @@ function App() {
 			<Router>
 				<Switch>
 					<Route exact path="/login">
-						<Login />
+						<LoginPage />
 					</Route>
 					<Route exact path="/register">
-						<Register />
+						<RegisterPage />
 					</Route>
 					<Route exact path="/dashboard">
 						<Dashboard />
@@ -30,6 +31,7 @@ function App() {
 					</Route>
 				</Switch>
 			</Router>
+			<AlertNotification />
 		</>
 	);
 }

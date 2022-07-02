@@ -1,4 +1,4 @@
-import alertAction from "../actions/alertActions";
+import alertActions from "../actions/alertActions";
 
 const initState = {
 	showAlertMessage: false,
@@ -7,13 +7,13 @@ const initState = {
 
 const reducer = (state = initState, action) => {
 	switch (action.type) {
-		case alertAction.OPEN_ALERT_MESSAGE:
+		case alertActions.OPEN_ALERT_MESSAGE:
 			return {
 				...state,
 				showAlertMessage: true,
 				alertMessageContent: action.content,
 			};
-		case alertAction.CLOSE_ALERT_MESSAGE:
+		case alertActions.CLOSE_ALERT_MESSAGE:
 			return {
 				...state,
 				showAlertMessage: false,
