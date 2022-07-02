@@ -9,7 +9,7 @@ const LoginPageInputs = ({ mail, setMail, password, setPassword }) => {
 				setValue={setMail}
 				label="E-mail"
 				type="text"
-				placeholder="Enter E-mail address"
+				placeholder="Enter e-mail address"
 			/>
 			<InputWithLabel
 				value={password}

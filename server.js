@@ -6,6 +6,7 @@ require("dotenv").config();
 
 const socketServer = require("./socketServer");
 const authRoutes = require("./routes/authRoutes");
+const friendInvitationRoutes = require("./routes/friendInvitationRoutes");
 
 const PORT = process.env.PORT || process.env.API_PORT;
 
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/api/auth", authRoutes);
+app.use("/api/friend-invitation", friendInvitationRoutes);
 
 const server = http.createServer(app);
 socketServer.registerSocketServer(server);
@@ -22,10 +24,10 @@ mongoose
 	.connect(process.env.MONGO_URI)
 	.then(() => {
 		server.listen(PORT, () => {
-			console.log(`server is listening on ${PORT}`);
+			console.log(`Server is listening on ${PORT}`);
 		});
 	})
 	.catch((err) => {
-		console.log("db connection fail");
+		console.log("db connection fail Server not started");
 		console.error(err);
 	});

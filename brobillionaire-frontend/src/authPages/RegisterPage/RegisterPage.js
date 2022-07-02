@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Typography } from "@mui/material";
 import AuthBox from "../../shared/components/AuthBox";
-import RegisterPageInputs from "./RegisterPageInput";
+import RegisterPageInputs from "./RegisterPageInputs";
 import RegisterPageFooter from "./RegisterPageFooter";
 import { validateRegisterForm } from "../../shared/utils/validators";
 import { connect } from "react-redux";
@@ -14,6 +14,7 @@ const RegisterPage = ({ register }) => {
 	const [mail, setMail] = useState("");
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
+
 	const [isFormValid, setIsFormValid] = useState(false);
 
 	const handleRegister = () => {

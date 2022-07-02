@@ -5,11 +5,11 @@ import { useHistory } from "react-router-dom";
 import { Tooltip } from "@mui/material";
 
 const getFormNotValidMessage = () => {
-	return "Email Id or Password not valid";
+	return "Enter correct E Mail and password. Both should contains between 6 and 12 characters";
 };
 
 const getFormValidMessage = () => {
-	return "Log in!";
+	return "Press to log in!";
 };
 
 const LoginPageFooter = ({ handleLogin, isFormValid }) => {

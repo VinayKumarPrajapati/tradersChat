@@ -5,6 +5,7 @@ const friendsUpdates = require("../../socketHandlers/updates/friends");
 const postAccept = async (req, res) => {
 	try {
 		const { id } = req.body;
+
 		const invitation = await FriendInvitation.findById(id);
 
 		if (!invitation) {
@@ -29,7 +30,7 @@ const postAccept = async (req, res) => {
 
 		friendsUpdates.updateFriendsPendingInvitations(receiverId.toString());
 
-		return res.status(200).send("Friend added");
+		return res.status(200).send("Friend successfuly added");
 	} catch (err) {
 		console.log(err);
 		return res.status(500).send("Something went wrong. Please try again");

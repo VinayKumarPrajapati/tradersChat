@@ -14,10 +14,10 @@ const postReject = async (req, res) => {
 
 		friendsUpdates.updateFriendsPendingInvitations(userId);
 
-		return res.status(200).send("Invitation rejected");
+		return res.status(200).send("Invitation succesfully rejected");
 	} catch (err) {
 		console.log(err);
-		return res.status(500).send("Something went wrong please try again later");
+		return res.status(500).send("Something went wrong please try again");
 	}
 };
 
